@@ -493,6 +493,8 @@ export default function App() {
     //if (!user) return;
     const name = playerName.trim() || 'นักพนันทะเลทราย';
     const code = Math.random().toString(36).substring(2, 6).toUpperCase();
+    const currentUserId = user?.uid || 'guest-' + Math.random().toString(36).substring(2, 6); // เพิ่มตัวแปรสำรองป้องกัน Error
+    
     const roomRef = doc(
       db,
       'artifacts',
@@ -505,13 +507,13 @@ export default function App() {
 
     const initialData = {
       roomId: code,
-      hostId: user.uid,
+      hostId: currentUserId, // ใช้ตัวแปรสำรอง
       status: 'lobby', // lobby | playing | leg_end | finished
       legNumber: 1,
       currentTurn: 0,
       players: [
         {
-          id: user.uid,
+          id: currentUserId, // ใช้ตัวแปรสำรอง
           name,
           isBot: false,
           money: 3,
