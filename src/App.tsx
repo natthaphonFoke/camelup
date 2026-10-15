@@ -42,12 +42,13 @@ import {
 // ==========================================
 // หมายเหตุ: หากนำไปรันบนเว็บของตัวเอง (เช่น Vercel/Netlify) ให้นำ Firebase Config ของคุณมาใส่แทนที่ตรงนี้ครับ
 const firebaseConfig = {
-  apiKey: 'AIzaSyBczy-puVqP48snMERayJ05Qrf_Iu2lbI',
-  authDomain: 'foke-30afe.firebaseapp.com',
-  projectId: 'foke-30afe',
-  storageBucket: 'foke-30afe.appspot.com',
-  messagingSenderId: '732495947881',
-  appId: '1:732495947881:web:fd6d3a5645b9d087131af8',
+  apiKey: "AIzaSyBczy-puVqP48snMERayJ05Qrf_Iu2lbI",
+  authDomain: "foke-30afe.firebaseapp.com",
+  projectId: "foke-30afe",
+  storageBucket: "foke-30afe.appspot.com",
+  messagingSenderId: "732495947881",
+  appId: "1:732495947881:web:fd6d3a5645b9d087131af8",
+  measurementId: "G-2NMZMT42JR"
 };
 
 const app = initializeApp(firebaseConfig);
