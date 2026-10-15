@@ -490,10 +490,9 @@ export default function App() {
   // การจัดการห้อง (สร้างห้อง / เข้าห้อง / เพิ่มบอท)
   // ==========================================
   const createRoom = async () => {
-    //if (!user) return;
     const name = playerName.trim() || 'นักพนันทะเลทราย';
     const code = Math.random().toString(36).substring(2, 6).toUpperCase();
-    const currentUserId = user?.uid || 'guest-' + Math.random().toString(36).substring(2, 6); // เพิ่มตัวแปรสำรองป้องกัน Error
+    const currentUserId = user?.uid || 'guest-' + Math.random().toString(36).substring(2, 6);
     
     const roomRef = doc(
       db,
@@ -507,13 +506,13 @@ export default function App() {
 
     const initialData = {
       roomId: code,
-      hostId: currentUserId, // ใช้ตัวแปรสำรอง
+      hostId: currentUserId,
       status: 'lobby', // lobby | playing | leg_end | finished
       legNumber: 1,
       currentTurn: 0,
       players: [
         {
-          id: currentUserId, // ใช้ตัวแปรสำรอง
+          id: currentUserId,
           name,
           isBot: false,
           money: 3,
