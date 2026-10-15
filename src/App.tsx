@@ -490,7 +490,7 @@ export default function App() {
   // การจัดการห้อง (สร้างห้อง / เข้าห้อง / เพิ่มบอท)
   // ==========================================
   const createRoom = async () => {
-    if (!user) return;
+    //if (!user) return;
     const name = playerName.trim() || 'นักพนันทะเลทราย';
     const code = Math.random().toString(36).substring(2, 6).toUpperCase();
     const roomRef = doc(
