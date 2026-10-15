@@ -1111,10 +1111,12 @@ export default function App() {
               </div>
             )}
 
-            <button
-              onClick={createRoom}
-              className="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-amber-950 font-black text-base shadow-lg transition transform active:scale-95 flex items-center justify-center gap-2"
-            >
+<button
+  onClick={createRoom}
+  disabled={false}
+  style={{ opacity: 1, pointerEvents: 'auto' }}
+  className="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-amber-950 font-black text-base shadow-lg transition transform active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
+>
               <Sparkles className="w-5 h-5" />
               สร้างห้องใหม่ (รับรหัส 4 หลัก)
             </button>
